@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hi Pookieee!</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-body{
+            position: fixed;
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('lightStars.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content{
+            position: relative;
+            width: 350px;
+            height: 400px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.468);
+            margin: auto;
+            top: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            border-radius: 15px;
+            font-style: italic;
+            background-color: pink;
+        }
+
+        button{
+            position: relative;
+            cursor:pointer;
+            width: 50px;
+            height: 35px;
+            top: 5rem;
+            font-size: 13px;
+            border-radius: 3px;
+            border: .5px solid rgba(0, 0, 0, 0.641);
+            font-family: Verdana;
+            border: none;
+            /* border-radius: 50px; */
+        }
+
+         .moon{
+            position: absolute;
+            float: right;
+            top: 10px;
+            right: 2rem;
+            background-color: black;
+            color: white;
+        }
+
+        .sun{
+            position: absolute;
+            float: right;
+            top: 55px;
+            right: 2rem;
+            background-color: whitesmoke;
+        }
+
+        #yes{
+            background-color: green;
+            color: white;
+        }
+
+        #no{
+            background-color: red;
+            color: white;
+        }
+
+        .gif-container{
+            position: absolute;
+           bottom: 50%;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+        }
+
+        img{
+            width: 150px;
+        }
+
+        p{
+            position: relative;
+            top: 50px;
+            
+        }
+
+        i{
+           font-size: 17px;
+        }
+
+    </style>
+</head>
+<body>
+    
+<div class="main-body" id="dark">
+    <div class="content" id="content">
+        <p>Can I have some kiss?</p>
+    </div>
+    <div class="gif-container" id="sticker">
+        <img src="pleaseBEar.gif" alt="" id="image">
+   </div>
+    <button onclick="yes()" id="yes">Yes</button>
+    <button onclick="no()" id="no">No</button>
+    <button onclick="DarkMode()" class="moon" id="moon"><i class="fa-regular fa-moon"></i></button>
+    <button onclick="LightMode()" class="sun" id="sun"><i class="fa-regular fa-sun"></i></button>
+</div>
+
+
+<script>
+
+    let content = document.getElementById('content');
+    let yess = document.getElementById('yes');
+    let noo = document.getElementById('no');
+    let theme = document.getElementById('dark');
+    let light = document.getElementById('sun');
+    let dim = document.getElementById('moon');
+   
+    function DarkMode(){
+        theme.style.backgroundImage = "url('darkStars.jpg')";
+        theme.style.transition = "0.5s ease";
+        content.style.boxShadow = "3px 3px 10px rgba(255, 255, 255, 0.600)"
+        content.style.backgroundColor = "pink";
+        dim.style.backgroundColor = "grey";
+        
+    }
+
+    function LightMode(){
+        theme.style.backgroundImage = "url('lightStars.jpg')";
+        theme.style.transition = "0.5s ease";
+        content.style.boxShadow = "3px 3px 10px rgba(0, 0, 0, 0.468)"
+        content.style.backgroundColor = "pink"
+        dim.style.backgroundColor = "black";
+        
+    }
+
+
+    function yes(){
+        content.innerHTML = "Yeheey! Thank you loooove<br>&#128150;&#128150;&#128150;<br><br><br><br><br><br>";
+        noo.style.display = "none";
+        yess.style.display = "none";
+        content.style.alignItems = "end";
+        let img = document.getElementById('image');
+        img.src = 'yeheyBear.gif';
+        img.style.width = "200px";
+        img.style.position = "relative";
+        img.style.top = "20px";
+        
+    }
+
+    function no(){
+        noo.style.width = "45px";
+        noo.style.height = "30px";
+        noo.style.fontSize = "11px";
+        yess.style.width = "55px";
+        yess.style.height = "40px";
+        yess.style.fontSize = "14px";
+
+        noo.onclick = function no1(){
+            noo.style.width = "40px";
+            noo.style.height = "25px";
+            noo.style.fontSize = "9px";
+            yess.style.width = "60px";
+            yess.style.height = "45px";
+            yess.style.fontSize = "15px";
+
+            noo.onclick = function no1(){
+                noo.style.width = "35px";
+                noo.style.height = "20px";
+                noo.style.fontSize = "7px";
+                yess.style.width = "65px";
+                yess.style.height = "50px";
+                yess.style.fontSize = "16px";
+
+                noo.onclick = function no1(){
+                    noo.style.width = "30px";
+                    noo.style.height = "15px";
+                    noo.style.fontSize = "5px";
+                    yess.style.width = "70px";
+                    yess.style.height = "55px";
+                    yess.style.fontSize = "17px";
+
+                    noo.onclick = function no1(){
+                        noo.style.width = "15px";
+                        noo.style.height = "5px";
+                        noo.style.fontSize = "0px";
+                        yess.style.width = "75px";
+                        yess.style.height = "60px";
+                        yess.style.fontSize = "18px";
+
+                        noo.onclick = function no1(){
+                            noo.style.width = "1px";
+                            noo.style.height = "1px";
+                            noo.style.fontSize = "0px";
+                            yess.style.width = "80px";
+                            yess.style.height = "65px";
+                            yess.style.fontSize = "19px";
+
+                            noo.onclick = function no1(){
+                                noo.style.display = "none"
+                                yess.style.width = "81px";
+                                yess.style.height = "66px";
+                                yess.style.fontSize = "19px";
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+    }
+
+   
+
+
+
+</script>
+
+
+
+</body>
+</html>
