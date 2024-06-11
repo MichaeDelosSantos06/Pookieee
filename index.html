@@ -44,7 +44,7 @@
             cursor:pointer;
             width: 50px;
             height: 35px;
-            top: 5rem;
+            top: -5rem;
             font-size: 13px;
             border-radius: 3px;
             border: .5px solid rgba(0, 0, 0, 0.641);
@@ -81,8 +81,8 @@
         }
 
         .gif-container{
-            position: absolute;
-           bottom: 50%;
+            position: relative;
+           bottom: 25%;
             display: flex;
             justify-content: center;
             width: 100%;
@@ -102,6 +102,33 @@
         i{
            font-size: 17px;
         }
+
+       @media  (max-height: 650px) {
+            .gif-container{
+                position: relative;
+                bottom: 28%;
+            }
+       }
+
+       @media  (max-height: 590px) {
+            .gif-container{
+                position: relative;
+                bottom: 32%;
+            }
+       }
+
+       @media (max-width: 375px){
+        .content{
+            position: relative;
+            width: 330px;
+            height: 375px;
+            
+           
+        }
+
+       }
+
+
 
     </style>
 </head>
@@ -150,7 +177,7 @@
 
 
     function yes(){
-        content.innerHTML = "Yeheey! Thank you loooove<br>&#128150;&#128150;&#128150;<br><br><br><br><br><br>";
+        content.innerHTML = "Yeheey! Thank you loooove<br>&#128150;&#128150;&#128150;<br><br><br><br><br>";
         noo.style.display = "none";
         yess.style.display = "none";
         content.style.alignItems = "end";
